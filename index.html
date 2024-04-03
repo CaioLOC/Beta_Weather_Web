@@ -8,22 +8,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
-    <title>BetaWeather</title>
+    <title>Beta Weather</title>
 </head>
 <body>
     <div id="main-container">
         <input type="text" placeholder="Digite o nome da cidade" class="input-city">
-        <button onclick="clickOnButton()">
+        <button onclick="clickOnButton()" class="search-button">
             <img src="assets/img/find.svg" alt="search icon">
         </button>
         <div class="weather-infos">
             <h2>Tempo em Recife</h2>
-            <p class="temperature">21°C</p>
+            <p class="temperature">27°C</p>
             <div class="weather-icon">
                 <img src="https://openweathermap.org/img/wn/04n.png" alt="Icone representativo do tempo" class="weather-image">
                 <p class="climatic-condition">nublado</p>
             </div>
             <p class="humidity">Umidade: 70%</p>
+        </div>
+        <span class="span-more-info-button">
+            <button class="open-more-info-button" onclick="moreInfo()">Mostrar mais</button>
+        </span>
+        <div class="more-info" id="more-info">
+            <p class="max-temperature">Temperatura máxima: 31°C</p>
+            <p class="min-temperature">Temperatura mínima: 24°C</p>
+            <p class="feels-like">Sensaçao térmica: 37°C</p>
+            <p class="pressure">Pressão: 1000 mb</p>
         </div>
     </div>
 </body>

@@ -34,7 +34,7 @@ input {
     width: 80%;
 }
 
-button {
+.search-button {
     border: none;
     border-radius: 50px;
     outline: none;
@@ -44,7 +44,7 @@ button {
     background-color: #7e7979a9;
 }
 
-button img {
+.search-button img {
     width: 20px;
 }
 
@@ -67,7 +67,7 @@ h2 {
     align-items: center;
 }
 
-.weather-icon p {
+.climatic-condition {
     color: white;
     padding-left: 10px;
     text-transform: capitalize;
@@ -78,3 +78,34 @@ h2 {
     padding-top: 5px;
 }
 
+.span-more-info-button {
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-more-info-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.4em;
+    background-color: rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.more-info.hidden {
+    display: none;
+}
+
+.main-container.show-more .more-info {
+    padding-top: 25px;
+    display: block;
+}
+
+.max-temperature , .min-temperature , .max-temperature , .feels-like , .pressure {
+    color: white;
+    padding-top: 10px;
+}

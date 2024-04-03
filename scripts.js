@@ -7,6 +7,10 @@ function dataOnScreen(data) {
     document.querySelector(".weather-image").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
     document.querySelector(".climatic-condition").innerHTML = data.weather[0].description
     document.querySelector(".humidity").innerHTML = `Umidade: ${data.main.humidity}%`
+    document.querySelector(".max-temperature").innerHTML = `Temperatura máxima: ${Math.floor(data.main.temp_max)}°C`
+    document.querySelector(".min-temperature").innerHTML = `Temperatura mínima: ${Math.floor(data.main.temp_min)}°C`
+    document.querySelector(".feels-like").innerHTML = `Sensação térmica: ${Math.floor(data.main.feels_like)}°C`
+    document.querySelector(".pressure").innerHTML = `Pressão: ${data.main.pressure} mb`
 }
 
 async function searchCity(city) {
@@ -17,4 +21,29 @@ async function searchCity(city) {
 function clickOnButton() {
     const city = document.querySelector(".input-city").value
     searchCity(city)
+}
+
+// function moreInfo() {
+//     const moreInfo = document.getElementById('more-info')
+//     moreInfo.classList.add('open')
+
+//     moreInfo.addEventListener('click', (e) => {
+//         if(e.target.id == 'close-more-info-button') {
+//             moreInfo.classList.remove('open')
+//         }
+//     })
+// }
+
+function moreInfo() {
+    const openMoreInfoButton = document.querySelector('.open-more-info-button');
+    const moreInfo = document.querySelector('.more-info');
+
+
+    if (openMoreInfoButton.innerText === 'Mostrar mais') {
+        openMoreInfoButton.innerText = 'Mostrar menos';
+        moreInfo.classList.remove('hidden')
+    } else {
+        openMoreInfoButton.innerText = 'Mostrar mais';
+        moreInfo.classList.add('hidden')
+    }
 }
